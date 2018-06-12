@@ -135,3 +135,11 @@ services:
     image: sawtooth-poet-simulator-local:${ISOLATION_ID}
     volumes:
       - ../../:/project/sawtooth-core
+
+  block-info-tp:
+    build:
+      context: ../../
+      dockerfile: ./families/block_info/Dockerfile
+    image: block-info-tp-local:${ISOLATION_ID}
+    volumes:
+      - ../../:/project/sawtooth-core
